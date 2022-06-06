@@ -16,7 +16,7 @@ const loop = setInterval(() => {
     // taking the computed style in the image of mario
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px','');
 
-    if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 178) {
+    if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 180) {
         
         pipe.style.animation = 'none';
         pipe.style.left = `${pipePosition}px`

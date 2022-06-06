@@ -4,34 +4,44 @@
     box-sizing: border-box;
 }
 
+.game-wallpaper {
+    background-image: url("../assets/img/backgroud.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 .game-board {
     width: 100%;
-    height: 838px;
-    margin: 0 auto;
+    height: 100%;
     /* for the images to respect the delimitation of the box, using position relative */
     position: relative;
     /* for all the objects that get out of the box, just stay hidden */
     overflow: hidden;
-    background-image: url("../assets/img/backgroud.png");
-    background-repeat: no-repeat;
-    background-size: 104%;
+    background-image: url("../assets/img/floor.png");   
+    background-repeat: repeat-x;
+    background-position: center bottom;
 }
 
 .clouds {
     position: absolute;
-    padding-top: 100px;
     width: 550px;
     animation: clouds-animation 20s infinite linear;
 }
 
 .floor {
-    position: absolute;
-    bottom: -38px;
+    position: relative;
 }
+
 
 .mario {
     position: absolute;
-    bottom: 65px;
+    bottom: 104px;
     width: 145px;
    
 }
@@ -43,7 +53,7 @@
 .pipe {
     /* To work with independent images, using position: absolute; */
     position: absolute;
-    bottom: 62px;
+    bottom: 104px;
     width: 80px;
     /* using animation */
     /* infinite to animation works all the time */
@@ -79,22 +89,22 @@
 @keyframes mario-jump-animation {
    
     0% {
-        bottom: 65;
+        bottom: 104;
     }
 
     40% {
-        bottom: 245px;
+        bottom: 284px;
     }
 
     50% {
-        bottom: 245px;
+        bottom: 284px;
     }
 
     60% {
-        bottom: 245px;
+        bottom: 284px;
     }
 
     100% {
-        bottom: 65;
+        bottom: 104;
     }
 }
