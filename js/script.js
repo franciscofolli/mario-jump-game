@@ -8,7 +8,7 @@ const marioJump = () => {
     },500)
 }
 document.addEventListener('keydown', marioJump)
-
+document.addEventListener('click', marioJump)
 const loop = setInterval(() => {
 
     // if tube offset is 115px in front of mario
